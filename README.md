@@ -1,7 +1,7 @@
 # nextia80.github.io
 
 # 공부 정리
-* html [링크](./markdown.md)
+* html [링크](./html.md)
 * MarkDown[링크](./markdown.md)
 
 
