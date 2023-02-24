@@ -2,4 +2,4 @@
 # markdown 문법 정리
 
 # html강좌
-    1. hello html [link](./html/00.hmtl)
+hello html [link](./html/00.hmtl)
