@@ -11,3 +11,4 @@
 
 
 * [image size 조절](https://blog.yena.io/studynote/2017/11/23/Github-resize-image.html){:target="_blank"}
+* [링크새창](https://archuive.tistory.com/40){:target="_blank"}
