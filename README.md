@@ -6,6 +6,17 @@
 
 
 # UpDate 기록
+## 2024-02-28
+* git - pull은 해당 폴더에서 실행해야 한다. 안 그러면 에러가 나옴
+```
+PS C:\Users\user\Desktop\git\gitHub> git pull origin main
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+```
+
 ## 2024-02-27
 * 회사 컴에서 다시 연결!
   remote -> pull origin 으로 연결함.
