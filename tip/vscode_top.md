@@ -12,16 +12,22 @@
 뭐 여차저차 문제는 해결했는데 그 과정에서 정말 유용했던 정보를 얻었다
 
 들여쓰기 넓이를 조절하는 법
+
 ![image](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcZpWad%2FbtrjLk6p6G9%2FkKWINwUrxk7roABDQaTDkk%2Fimg.png)
+
 
 VScode 우측 하단을 보면 위 이미지처럼 코드에 대한 설명이 나온다
 여기서 공백이 현재 2로 설정되어 있는걸 볼 수 있다
 이게 바로 들여쓰기 넓이다
 이 공백을 클릭하면.....
+
 ![image](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fbx5SPx%2FbtrjLw0eaDu%2FQnAGHFvpSR8p9KexIk2kPK%2Fimg.png)
+
 이렇게 화면 상단에 작업선택란이 뜨게 된다
 이부분에서 '공백을 사용한 들여쓰기'를 클릭하면
+
 ![image](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbkA2wH%2FbtrjKM94MGp%2FIZZJOfH3K4nqgJP9kckPwK%2Fimg.png)
+
 이런식으로 현재 탭 크기를 조절할 수 있도록 되어 있다
 
 * 주의해야 할 점!*
@@ -31,7 +37,9 @@ VScode 우측 하단을 보면 위 이미지처럼 코드에 대한 설명이 �
 즉, 고정값을 건드려야만 추후 새롭게 만들 소스코드에서도 동일한 탭 크기를 사용할 수 있다는 것이다
 들여쓰기 넓이 고정값으로 지정하기
 관리 - 설정 으로 들어가서 검색창에 'indentation'이라고 검색하면 아래와 같은 설정 창이 뜬다
+
 ![image](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fc2ME7n%2FbtrjJyLgClo%2FUgUWkv1hto8BPbYyynMPzk%2Fimg.png)
+
 여기서 확인해야할 사항
 
 Editor : Insert Spaces
@@ -53,7 +61,9 @@ Editor : Tab Size
 
 들여쓰기 자동정렬하기
 PHP에 경우 워낙 열고 닫고 하는 문장이 많아서 들여쓰기가 참 민감하다
+
 ![image](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FHiogg%2FbtrjLxEPYYm%2FCF54mB9ZXhkvIKtAEUb480%2Fimg.png)
+
 만약 위와 같이 들여쓰기가 개판이 나있을 경우
 1. 들여쓰기 정렬이 필요한 부분을 드래그해서 잡아준다
 2. Ctrl + K, Ctrl + F를 차례대로 눌러준다
@@ -61,4 +71,4 @@ PHP에 경우 워낙 열고 닫고 하는 문장이 많아서 들여쓰기가 �
 진짜 순식간에 정렬이 끝나버린다
 참으로 단축키를 알아두는건 내 업무와 멘탈을 윤택하게 해준다
 
-이상 뒤늦은 꿀팁전수 끝!
+이상 뒤늦은 꿀팁전수 끝!~~~~
