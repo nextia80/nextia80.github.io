@@ -8,7 +8,5 @@
 
 사용법은 [링크명(=파란색글씨)](#찾아갈목차명)
 
-
-
-* [image size 조절](https://blog.yena.io/studynote/2017/11/23/Github-resize-image.html){:target="_blank"}
-* [링크새창](https://archuive.tistory.com/40){:target="_blank"}
+* <a href="https://www.google.com/" target="_blank">image size 조절</a>
+* <a href="https://www.google.com/" target="_blank">link 링크새창</a>
