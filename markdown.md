@@ -10,4 +10,4 @@
 
 
 
-* [image size 조절](https://blog.yena.io/studynote/2017/11/23/Github-resize-image.html)
+* [image size 조절](https://blog.yena.io/studynote/2017/11/23/Github-resize-image.html){:target="_blank"}
