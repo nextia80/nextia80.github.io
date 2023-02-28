@@ -17,6 +17,25 @@ Please make sure you have the correct access rights
 and the repository exists.
 ```
 
+* menu를 새로 구성해야 겠음
+```
+NOTICE
+DEV DIARY
+TEACHING
+* web
+  * html
+  * javascript
+  * css
+  * php
+  * node.js
+  * react
+* ide
+  * vscode
+* db
+  * mysql
+  * oracle
+```
+
 ## 2024-02-27
 * 회사 컴에서 다시 연결!
   remote -> pull origin 으로 연결함.
