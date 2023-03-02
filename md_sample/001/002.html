@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Markdown Viewer</title>
+</head>
+<body>
+  <div id="markdown-content"></div>
+
+  <script>
+    const xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        const md = this.responseText;
+        const html = parseMarkdown2(md);
+        document.getElementById("markdown-content").innerHTML = html;
+      }
+    };
+    xhttp.open("GET", "example.md", true);
+    xhttp.send();
+
+    function parseMarkdown(md) {
+      // bold
+      md = md.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+      md = md.replace(/\_\_(.*?)\_\_/g, '<strong>$1</strong>');
+      
+      // italic
+      md = md.replace(/\*(.*?)\*/g, '<em>$1</em>');
+      md = md.replace(/\_(.*?)\_/g, '<em>$1</em>');
+
+      // headings
+      md = md.replace(/\#{1}(.+)/g, '<h1>$1</h1>');
+      md = md.replace(/\#{2}(.+)/g, '<h2>$1</h2>');
+      md = md.replace(/\#{3}(.+)/g, '<h3>$1</h3>');
+      md = md.replace(/\#{4}(.+)/g, '<h4>$1</h4>');
+      md = md.replace(/\#{5}(.+)/g, '<h5>$1</h5>');
+      md = md.replace(/\#{6}(.+)/g, '<h6>$1</h6>');
+
+      // paragraphs
+      md = md.replace(/(.+)((\r?\n|\r){2})/g, '<p>$1</p>');
+
+      // unordered lists
+      md = md.replace(/\*\s(.+)/g, '<li>$1</li>');
+      md = md.replace(/<\/li>(\r?\n|\r)+<li>/g, '</li><li>');
+      md = md.replace(/<li>/g, '<ul><li>');
+      md = md.replace(/<\/li>/g, '</li></ul>');
+      
+      // ordered lists
+      md = md.replace(/\d+\.\s(.+)/g, '<li>$1</li>');
+      md = md.replace(/<\/li>(\r?\n|\r)+<li>/g, '</li><li>');
+      md = md.replace(/<li>/g, '<ol><li>');
+      md = md.replace(/<\/li>/g, '</li></ol>');
+
+      return md;
+    }
+
+
+    function parseMarkdown2(markdown) {
+  let result = "";
+  let lines = markdown.split("\n");
+  let isInCodeBlock = false;
+
+  for (let i = 0; i < lines.length; i++) {
+    let line = lines[i];
+    let trimmedLine = line.trim();
+
+    // Code block 처리
+    if (trimmedLine.startsWith("```")) {
+      isInCodeBlock = !isInCodeBlock;
+      result += `<pre><code>`;
+      continue;
+    }
+
+    if (isInCodeBlock) {
+      result += `${line}\n`;
+      continue;
+    }
+
+    // 제목 처리
+    let headingLevel = 0;
+    while (trimmedLine.startsWith("#")) {
+      headingLevel++;
+      trimmedLine = trimmedLine.slice(1).trim();
+    }
+    if (headingLevel > 0) {
+      result += `<h${headingLevel}>${trimmedLine}</h${headingLevel}>\n`;
+      continue;
+    }
+
+    // 리스트 처리
+    if (trimmedLine.startsWith("- ")) {
+      result += `<li>${trimmedLine.slice(2)}</li>\n`;
+      continue;
+    }
+
+    // 강조 처리
+    let emphasizedLine = "";
+    while (trimmedLine.includes("*")) {
+      let startIndex = trimmedLine.indexOf("*");
+      let endIndex = trimmedLine.indexOf("*", startIndex + 1);
+      emphasizedLine += trimmedLine.slice(0, startIndex);
+      emphasizedLine += "<em>";
+      emphasizedLine += trimmedLine.slice(startIndex + 1, endIndex);
+      emphasizedLine += "</em>";
+      trimmedLine = trimmedLine.slice(endIndex + 1);
+    }
+    emphasizedLine += trimmedLine;
+    result += `<p>${emphasizedLine}</p>\n`;
+  }
+
+  return result;
+}
+  </script>
+</body>
+</html>
