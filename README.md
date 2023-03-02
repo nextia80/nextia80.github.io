@@ -8,7 +8,7 @@
 # UpDate 기록
 ## 2024-03-02
 * (C) : html 002 modify
-* md 파서 만들어보자
+* md 파서 만들어보자 [링크](https://jung-max.github.io/2019/09/27/Web-Javascript-MarkDown%EA%B5%AC%ED%98%84/)
 
 ## 2024-03-01
 * (h) : html 002 modify
